@@ -1,0 +1,61 @@
+@class-prefix-toast: ~'kpui-toast';
+@animationDuration: 300ms;
+
+.@{class-prefix-toast} {
+  /* Fade */
+  &-fade-enter,
+  &-fade-appear,
+  &-fade-exit-done {
+    opacity: 0;
+  }
+
+  &-fade-appear-active,
+  &-fade-enter-active {
+    opacity: 1;
+    transition: opacity @animationDuration;
+  }
+  &-fade-exit,
+  &-fade-enter-done {
+    opacity: 1;
+  }
+  &-fade-exit-active {
+    opacity: 0;
+    transition: opacity @animationDuration;
+  }
+
+
+  &-wrap {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: fit-content;
+    min-width: 96px;
+    max-width: 70%;
+    max-height: 70%;
+    overflow: auto;
+    color: #fff;
+    text-align: center;
+    word-break: break-all;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    pointer-events: all;
+    z-index: 9999999;
+    &-wrap-icon {
+      padding: 16px;
+      &-icon {
+        margin-bottom: 8px;
+        font-size: 36px;
+        line-height: 1;
+      }
+    }
+  }
+  &-wrap-text {
+    padding: 25px 23px;
+    font-size: 14px;
+  }
+
+  &-loading {
+    font-size: 24px;
+  }
+}

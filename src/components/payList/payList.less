@@ -1,0 +1,87 @@
+.kpui-huabei-list {
+  &-emi{
+    color: var(--kpui-color-text);
+  }
+  &-emi-tips{
+    color: var(--kpui-color-second-text);
+    font-size: 12px;
+  }
+  &-checkout {
+    width: 20px;
+    height: 20px;
+    color: var(--kpui-color-primary);
+  }
+}
+@import url(../../design/variables.less);
+@class-prefix-payList: ~'kpui-payList';
+.@{class-prefix-payList}{
+
+  padding: 0 20px;
+  &-list{
+    &-item{
+      padding-right: 0 !important;
+    }
+  }
+  
+  &-checkout {
+    width: 20px;
+    height: 20px;
+    color: var(--kpui-color-primary);
+  }
+  &-unCheckout{
+    width: 20px;
+    height: 20px;
+    color: #dfdfdf;
+  }
+
+  &-bottom{
+    position: fixed;
+    bottom:0px;
+    width: 100%;
+    left: 0;
+    height: 140px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media screen and (max-width: 374px)  {
+      padding:0 12px;
+     }
+     padding: 0 20px;
+    
+  }
+  &-agree{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    &-icon{
+      width: 12px;
+      height: 12px;
+      background-image: ~"url(@{ImgUrl}/pay-sdk/85817102102202wssg.png)";
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &-label{
+      font-size: 12px;
+      margin-left: 10px;
+    }
+    &-a{
+      color:#0077FF ;
+    }
+  }
+  .active &-agree{
+    &-icon{
+      background-image:~"url(@{ImgUrl}/pay-sdk/33717102102202gtej.png)";
+    }
+  }
+  &-btn{
+    background-color: var(--kpui-color-primary);
+    height: 43px;
+    border-radius: 22px;
+    color: var(--kpui-color-white);
+    border: none;
+  }
+ 
+}

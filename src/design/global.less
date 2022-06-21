@@ -1,0 +1,36 @@
+
+
+:root {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  color: var(--kpui-color-text);
+  font-size: var(--kpui-font-size-main);
+  font-family: var(--kpui-font-family);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+
+a {
+  color: var(--kpui-color-primary);
+  transition: opacity ease-in-out 0.2s;
+  &:active {
+    opacity: 0.8;
+  }
+}
+svg{
+  width: 20px;
+  height: 20px;
+}
+
+body.kpui-overflow-hidden {
+  overflow: hidden !important;
+}

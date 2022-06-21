@@ -1,0 +1,58 @@
+
+@class-prefix-pay-success-modal: ~"kpui-paysuccess-modal";
+@animationDuration:~"300ms";
+.@{class-prefix-pay-success-modal}{
+
+  &-fade-appear,
+  &-fade-enter {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  &-fade-appear-active,
+  &-fade-enter-active,&-fade-enter-done {
+     opacity: 1;
+    transform: scale(1);
+    transition: all @animationDuration;
+  }
+
+  &-fade-exit {
+    opacity: 1;
+  transform: scale(1);
+  }
+  &-fade-exit-active {
+    opacity: 0;
+    transform: scale(.6);
+    transition: all  @animationDuration;
+  }
+ &-wrap{
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  min-width: 280px;
+  max-width: 75vw;
+  transform: translate(-50%,-50%);
+  
+   
+  }
+  &-main{
+    width: 100%;
+    font-size: 14px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+   
+    li{
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+    }
+  }
+  &-payed{
+    color: var(--kpui-color-primary);
+    border-bottom: 1px solid var(--kpui-border-color);
+    border-top: 1px solid var(--kpui-border-color);
+  }
+}
+  

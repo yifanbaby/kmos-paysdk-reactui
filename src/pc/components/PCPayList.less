@@ -1,0 +1,157 @@
+.pay-container {
+  margin: 0 auto;
+  width: 1100px;
+  background: #fff;
+  color: #222;
+  .pay-title {
+    margin: 30px 0 15px 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+.pay-content {
+  display: flex;
+  flex-direction: row;
+  // align-items: center;
+  background: #FAFAFA;
+  // padding: 30px 24px;
+  // padding: 0 24px 30px 0;
+  border: 1px solid #F2F2F2;
+  background: #fff;
+  min-height: 298px;
+  border-radius: 4px;
+  .pay-list {
+    // width: 580px;
+    background: #FAFAFA;
+    .pay-type-list {
+      height: 100%;
+      list-style-type: none;
+      border-right: 1px solid #F2F2F2;
+      li {
+        display: flex;
+        align-items: center;
+        padding: 15px 20px 15px 24px;
+        font-size: 15px;
+        &:first-child.active {
+          border-top: none;
+          padding-top: 15px;
+        }
+        &.active {
+          margin: 0 -1px 0 0;
+          background: #fff;
+          border-top: 1px solid #F2F2F2;
+          border-bottom: 1px solid #F2F2F2;
+          padding-top: 14px;
+          padding-bottom: 14px;
+        }
+        &:last-child.active {
+          border-bottom: none;
+          padding-bottom: 15px;
+        }
+        // span {
+        //   margin-left: 10px;
+        // }
+        .inherit {
+          color: #dfdfdf;
+          font-size: 20px;
+          &.active {
+            color: #025EFF;
+          }
+        }
+        .checked-icon {
+          display: block;
+          width: 20px;
+          height: 20px;
+        }
+        img.pay-icon {
+          margin: 0 15px 0 20px;
+          width: 29px;
+          height: 29px;
+        }
+      }
+    }
+  }
+  .pay-wechat {
+    // margin-left: 350px;
+    // padding-top: 35px;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    .wechat-container {
+      width: 170px;
+      margin: 0 auto;
+    }
+    .apply-close {
+      margin: 0 auto;
+    }
+    .wechat-wrapper {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      height: 135px;
+      position: relative;
+      .pay-modal {
+        position: absolute;
+        top: 0;
+        left: 17px;
+        width: 136px;
+        height: 136px;
+        opacity: 0.8;
+        background: #000;
+        // border-radius: 10px;
+      }
+    }
+    .refresh-btn {
+      margin: 13px auto 0;
+      width: 72px;
+      height: 28px;
+      line-height: 28px;
+      background: #025EFF;
+      border-radius: 14px;
+      font-size:12px;
+      color: #fff;
+      text-align: center;
+    }
+  }
+}
+.agreement-wrapper {
+  margin-top: 16px;
+  padding-left: 24px;
+  .checkout-icon {
+    position: relative;
+    top: 1px;
+    margin-right: 4px;
+    width: 12px;
+    height: 12px;
+  }
+  span {
+    font-size: 12px;
+    color: #333;
+    &.agreement-text {
+      color: #0077FF;
+    }
+  }
+}
+.loading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  z-index: 999;
+  text-align: center;
+  img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.apply-title {
+  margin-bottom: 10px;
+  font-size: 22px;
+  color: #222;
+  font-weight: 600;
+}

@@ -1,0 +1,48 @@
+@animationDuration: 300ms;
+.kpui-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-index);
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  background-color: rgba(55, 55, 55, 0.6);
+  /* Fade */
+  &-fade-enter,
+  &-fade-appear,
+  &-fade-exit-done {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &-fade-appear-active,
+  &-fade-enter-active {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity @animationDuration, visibility @animationDuration;
+  }
+  &-fade-exit,
+  &-fade-enter-done {
+    visibility: visible;
+    opacity: 1;
+  }
+  &-fade-exit-active {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity @animationDuration, visibility @animationDuration;
+  }
+  &-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &-content {
+    z-index: 1;
+  }
+}
